@@ -16,6 +16,6 @@ const connectionConf: ConnectionOptions = {
 createConnection(connectionConf)
   .then( connection => {
     db = connection;
-    console.log('Connected to DB MySQL'.green)
+    console.log('Connected to DB MySQL')
   })
-  .catch( err => console.error('Error to try connect to DB: '.red, err))
+  .catch( err => console.error('Error to try connect to DB: ', err))
