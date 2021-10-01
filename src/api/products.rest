@@ -5,7 +5,7 @@
 GET {{route}} HTTP/1.1
 
 ### GET ALL WITH SORT BY NAME 
-GET {{route}}?_sort=name&_order=asc HTTP/1.1
+GET {{route}}?name=energetica&sortBy=price&sortType=desc HTTP/1.1
 
 ### GET BY ID
 GET {{route}}/99 HTTP/1.1

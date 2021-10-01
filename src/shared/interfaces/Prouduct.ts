@@ -6,5 +6,5 @@ export interface IProduct {
   url_image: null | string;
   price:    number;
   discount: number;
-  category: Category;
+  category: Category | number;
 }

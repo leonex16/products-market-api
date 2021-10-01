@@ -22,6 +22,6 @@ export class Product {
 
   @ManyToOne( () => Category, category => category, { eager: true } )
   @JoinColumn({name: 'category'})
-  category: Category;
+  category: Category | number;
   
 }
