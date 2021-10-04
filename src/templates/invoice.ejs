@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boleta eletrónica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href=<%= baseUrl + '/invoice.css' %> >
+</head>
+
+<body>
+  <main class="main-container">
+    <header class="header-container">
+      <p class="header-container__id-company">R.U.T: 76.123.456-7</p>
+      <p class="header-container__type-invoice">BOLETA ELECTRÓNICA</p>
+      <p class="header-container__id-invoice">N° <span><%= Number(new Date().toLocaleString('es-CL').replace(/\D/g, '')) %></span></p>
+    </header>
+    <article class="body-container">
+      <header class="information-continer">
+        <p class="information-container__name-company">Product Market S.A.</p>
+        <p class="information-container__comercial-business">VENTA AL POR MENOR DE ALIMENTOS EN COMERCIOS ESPECIALIZADOS
+        </p>
+        <p class="information-container__date-issue">Emisión: <%= new Date().toLocaleDateString('es-CL') %></p>
+      </header>
+      <div class="detail-container">
+        <table class="detail-table">
+          <thead class="detail-thead">
+            <tr class="detail-thead__tr">
+              <th class="detail-th">#</th>
+              <th class="detail-th">Desc</th>
+              <th class="detail-th">P. Uni</th>
+              <th class="detail-th">Cant.</th>
+              <th class="detail-th">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody class="detail-tbody">
+            <% items.forEach( ( item, i ) => { %>
+              <tr class="detail-tbody__tr">
+                <td class="detail-tbody__td"><%= i + 1 %></td>
+                <td class="detail-tbody__td"><%= item.name %></td>
+                <td class="detail-tbody__td"><%= item.price.toLocaleString('es-CL') %></td>
+                <td class="detail-tbody__td"><%= item.itemsLen %></td>
+                <td class="detail-tbody__td"><%= item.subTotal.toLocaleString('es-CL') %></td>
+              </tr>
+            <% } ) %>
+          </tbody>
+          <tfoot class="detail-tfoot">
+            <tr class="detail-tfoot__tr">
+              <td class="detail-tfoot__td" colspan="4">Total $: </td>
+              <td class="detail-tfoot__td"><%= total.toLocaleString('es-CL') %></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </article>
+    <footer class="footer-container">
+      <section class="stamp-sii">
+        <figure class="stamp-figure">
+          <img src="<%= baseUrl + '/assets/stamp.png' %>" alt="Timbre SII" class="stamp-figure__img">
+          <figcaption class="snap-figure__leyend">Timbre Electrónico SII</figcaption>
+        </figure>
+      </section>
+      <section class="verification-sii">
+        <p class="verification-sii__text">Verifique documento: desarrollo.libredte.cl/boletas</p>
+      </section>
+    </footer>
+  </main>
+</body>
+
+</html>

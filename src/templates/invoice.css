@@ -1,0 +1,130 @@
+* {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.header-container {
+  border: 2px solid #000000;
+}
+
+.header-container__id-company,
+.header-container__type-invoice,
+.header-container__id-invoice {
+  
+  text-align: center;
+  font-weight: bold;
+  margin: .5rem auto;
+}
+
+.body-container {
+  margin: 1rem auto;
+  flex-grow: 1;
+}
+
+/* .information-continer {} */
+
+.information-container__name-company,
+.information-container__comercial-business,
+.information-container__date-issue {
+   text-align: left;
+   font-weight: bold;
+   margin: .5rem auto;
+  }
+
+.detail-container {
+  margin: 1.5rem auto;
+}
+
+.detail-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.detail-thead {
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+/* .detail-thead__tr {} */
+
+.detail-th {
+  padding: .5rem 0;
+}
+
+/* .detail-tbody {} */
+
+.detail-tbody__tr {
+  border-bottom: 2px solid #000000; 
+}
+
+.detail-tbody__td {
+  text-align: center;
+  padding: .25rem 0;
+  min-width: 20px;
+  max-width: 20px;
+}
+
+.detail-tbody__td:nth-child(2) {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 100px;
+  max-width: 100px;
+  text-transform: capitalize;
+}
+
+/* .detail-tfoot {} */
+
+.detail-tfoot__tr {
+  border-bottom: 2px solid #000000; 
+}
+
+.detail-tfoot__td {
+  font-weight: bold;
+  text-align: center;
+  padding: .25rem 0;
+}
+
+.detail-tfoot__td:nth-child(1) {
+  text-align: right;
+}
+
+/* .footer-container {}
+
+.stamp-sii {}
+
+.stamp-figure {} */
+
+.stamp-figure__img {
+  width: 100%;
+} 
+
+.snap-figure__leyend {
+  text-align: center;
+  font-size: 12px;
+}
+
+.verification-sii {
+  margin: .5rem 0;
+}
+
+.verification-sii__text {
+  text-align: center;
+  font-size: 12px;
+}

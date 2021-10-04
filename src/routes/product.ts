@@ -9,5 +9,6 @@ const uri = API_VERSION + ENDPOINT;
 
 router.get(uri, _productController.GET);
 router.get(uri + '/:productId', _productController.GET_BY_ID);
+router.post(uri + '/generate-invoice', _productController.POST_INVOICE);
 
 export const routerProduct = router;

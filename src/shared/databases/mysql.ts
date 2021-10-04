@@ -8,10 +8,10 @@ const connectionConf: ConnectionOptions = {
   username: process.env.DB_USERNAME ?? '',
   password: process.env.DB_PASSWORD ?? '',
   database: process.env.DB_DATABASE ?? '',
-  // entities: [ 'build/models/**/*.js' ],
-  entities: [ 'src/models/**/*.ts' ],
+  entities: [ 'build/models/**/*.js' ],
+  // entities: [ 'src/models/**/*.ts' ],
   synchronize: false,
-  logging: true,
+  logging: false,
 }
 
 createConnection(connectionConf)
